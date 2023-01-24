@@ -1,0 +1,17 @@
+.Home {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.Home ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 2.5rem;
+  -moz-column-gap: 3.5rem;
+       column-gap: 3.5rem;
+  list-style-type: none;
+}
+.Home ul a {
+  text-decoration: none;
+}/*# sourceMappingURL=Home.css.map */

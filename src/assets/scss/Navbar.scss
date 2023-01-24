@@ -1,0 +1,18 @@
+.Navbar {
+  background-color: #152232;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    color: #a0b1c5;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+}

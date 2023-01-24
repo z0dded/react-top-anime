@@ -1,0 +1,16 @@
+.AnimeCart {
+  width: 180px;
+  text-align: center;
+  color: rgb(139, 160, 178);
+}
+.AnimeCart p {
+  margin-top: 0.75rem;
+}
+.AnimeCart .AnimeImage {
+  margin: 0 auto;
+  height: 250px;
+  width: 180px;
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+}/*# sourceMappingURL=AnimeCart.css.map */
