@@ -19,11 +19,6 @@ export const AnimeDetails = () => {
         ></div>
         <h1>{animeList[id].title}</h1>
         <p>{animeList[id].synopsis}</p>
-        <button
-          onClick={() => console.log(animeList[id].images.jpg.large_image_url)}
-        >
-          console
-        </button>
       </div>
     </div>
   );

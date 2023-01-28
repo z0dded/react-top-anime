@@ -12,7 +12,6 @@ export function APIContextProvider({ children }) {
       );
       const res = await req.json();
       setAnimeList(res.data);
-      console.log(animeList);
     }
     fetchData();
   }, []);
@@ -29,8 +28,5 @@ export function APIContextProvider({ children }) {
 
 export function useAPI() {
   const context = useContext(APIContext);
-  if (context === undefined) {
-    throw new Error("Context must be used within a Provider");
-  }
   return context;
 }
