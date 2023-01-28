@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./assets/css/App.css";
 import { AnimeDetails } from "./components/AnimeDetails";

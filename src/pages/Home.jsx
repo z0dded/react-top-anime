@@ -4,14 +4,10 @@ import { useState, useEffect } from "react";
 import { AnimeCart } from "../components/AnimeCart";
 import { useFetch } from "../hooks/useFetch";
 import { Link } from "react-router-dom";
+import { useAPI } from "../context/APIcontext";
 
-export const Home = () => {
-  // const [animeList, setAnimeList] = useState([]);
-  const [apiUrl, setApiUrl] = useState(
-    "https://api.jikan.moe/v4/top/anime?page=1&filter=bypopularity"
-  );
-
-  const { data: animeList } = useFetch(apiUrl);
+export const Home = ({ data }) => {
+  const { animeList } = useAPI();
 
   return (
     <div className="Home">
