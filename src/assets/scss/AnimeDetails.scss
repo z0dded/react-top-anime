@@ -1,5 +1,5 @@
 .AnimeDetails {
-  height: 100%;
+  height: calc(100vh - 3rem);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,15 +9,105 @@
 
   .AnimeDetailsCard {
     width: 50rem;
-    height: 30rem;
-    border: 1px solid white;
-    // display: flex;
+    min-height: 29.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #152232;
 
-    .AnimeDetailsImage {
-      width: 200px;
-      height: 500px;
-      border: 1px solid red;
-      border-radius: 50%;
+    .AnimeDetailsImageContainer {
+      display: flex;
+      align-items: flex-start;
+      height: 100%;
+
+      .AnimeDetailsImage {
+        height: 29.5rem;
+        width: 20rem;
+        border-radius: 10px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .AnimeDetailsCardText {
+      flex: 1;
+      height: 100%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 0.9rem;
+      }
+
+      .ReadMoreButton {
+        margin-left: 3px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: rgb(61, 180, 242);
+      }
+
+      .AddToListContainer {
+        width: 100%;
+        flex: 1;
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        .AddToListButton {
+          padding: 0.25rem 1rem;
+          font-size: 1.2rem;
+          border: 2px solid rgb(61, 180, 242);
+          border-radius: 4px;
+          background-color: transparent;
+          color: rgb(61, 180, 242);
+          transition: all 0.3s linear;
+
+          &:hover {
+            cursor: pointer;
+            border: 2px solid rgb(61, 180, 242);
+            background-color: rgb(61, 180, 242);
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .AddAnimeModalInvisible {
+    position: absolute;
+    z-index: -10;
+    visibility: none;
+  }
+
+  .AddAnimeModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .AddAnimeModalCard {
+      background-color: #152232;
+      border-radius: 10px;
+      width: 30rem;
+      height: 10rem;
     }
   }
 }

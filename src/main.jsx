@@ -4,12 +4,15 @@ import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./assets/css/main.css";
 import { APIContextProvider } from "./context/APIcontext";
+import { FilteredAnimeProvider } from "./context/FilteredAnimeContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
       <APIContextProvider>
-        <App />
+        <FilteredAnimeProvider>
+          <App />
+        </FilteredAnimeProvider>
       </APIContextProvider>
     </Router>
   </React.StrictMode>

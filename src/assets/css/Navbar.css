@@ -4,10 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
 }
 .Navbar ul {
   list-style-type: none;
+  display: flex;
+  gap: 2rem;
 }
 .Navbar a {
   color: #a0b1c5;

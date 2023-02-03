@@ -1,8 +1,14 @@
 .AnimeCart {
   width: 180px;
-  border: 1px solid white;
+  // border: 1px solid white;
+  border-radius: 6px;
+  padding: 0.75rem;
   text-align: center;
   color: rgb(139, 160, 178);
+
+  &:hover {
+    background-color: #1e3148;
+  }
 
   p {
     margin-top: 0.75rem;

@@ -1,19 +1,18 @@
 import React from "react";
-import "../assets/css/Home.css";
+import "../assets/css/Completed.css";
 import { AnimeCart } from "../components/AnimeCart";
-import { Link } from "react-router-dom";
-import { useAPI } from "../context/APIcontext";
-import { useState } from "react";
 import { useFilteredAnime } from "../context/FilteredAnimeContext";
+import { Link } from "react-router-dom";
 
-export const Home = () => {
-  const { fullAnimeList } = useAPI();
-  const { completedAnime, setCompletedAnime } = useFilteredAnime();
+export const Completed = () => {
+  const { completedAnime } = useFilteredAnime();
+  const uniqueAnimeList = [...new Set(completedAnime)];
 
   return (
-    <div className="Home">
+    <div className="Completed">
+      <h1>Completed Anime</h1>
       <ul>
-        {fullAnimeList.map(anime => (
+        {uniqueAnimeList.map(anime => (
           <li key={anime.mal_id}>
             <Link
               to={`/anime/${anime.mal_id}`}

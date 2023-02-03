@@ -1,9 +1,15 @@
-.Home {
-  height: 100%;
-  width: 100%;
+.Completed {
+  min-height: calc(100vh - 3rem);
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
   padding-top: 3rem;
-  display: grid;
-  place-items: center;
+
+  h1 {
+    color: white;
+    margin-bottom: 3rem;
+  }
 
   ul {
     display: grid;
@@ -11,10 +17,6 @@
     row-gap: 2.5rem;
     column-gap: 3.5rem;
     list-style-type: none;
-
-    .CompletedButton {
-      font-size: 2rem;
-    }
 
     a {
       text-decoration: none;

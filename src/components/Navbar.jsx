@@ -9,6 +9,9 @@ export const Navbar = () => {
         <li>
           <NavLink to={"/"}>Home</NavLink>
         </li>
+        <li>
+          <NavLink to={"/completed"}>Completed</NavLink>
+        </li>
       </ul>
     </div>
   );
