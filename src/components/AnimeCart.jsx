@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/AnimeCart.css";
+import "../assets/scss/AnimeCart.scss";
 
 export const AnimeCart = ({ title, image }) => {
   return (

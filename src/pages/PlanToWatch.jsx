@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/PlanToWatch.css";
+import "../assets/scss/PlanToWatch.scss";
 import { AnimeCart } from "../components/AnimeCart";
 import { useFilteredAnime } from "../context/FilteredAnimeContext";
 import { Link } from "react-router-dom";

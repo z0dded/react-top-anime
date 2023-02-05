@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import "./assets/css/App.css";
+import "./assets/scss/App.scss";
 import { AnimeDetails } from "./pages/AnimeDetails";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";

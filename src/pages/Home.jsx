@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/Home.css";
+import "../assets/scss/Home.scss";
 import { AnimeCart } from "../components/AnimeCart";
 import { Link } from "react-router-dom";
 import { useAPI } from "../context/APIcontext";

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../assets/css/AnimeDetails.css";
+import "../assets/scss/AnimeDetails.scss";
 import { useLocation, useParams } from "react-router-dom";
 import { useAPI } from "../context/APIcontext";
 import { useFilteredAnime } from "../context/FilteredAnimeContext";

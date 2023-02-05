@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/Completed.css";
+import "../assets/scss/Completed.scss";
 import { AnimeCart } from "../components/AnimeCart";
 import { useFilteredAnime } from "../context/FilteredAnimeContext";
 import { Link } from "react-router-dom";
