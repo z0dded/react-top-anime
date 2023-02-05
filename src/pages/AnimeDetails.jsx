@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "../assets/scss/AnimeDetails.scss";
 import { useLocation, useParams } from "react-router-dom";
 import { useAPI } from "../context/APIcontext";
