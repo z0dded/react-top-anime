@@ -8,6 +8,7 @@
 }
 .Completed h1 {
   color: white;
+  font-size: 3rem;
   margin-bottom: 3rem;
 }
 .Completed ul {

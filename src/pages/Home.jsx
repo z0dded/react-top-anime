@@ -3,15 +3,13 @@ import "../assets/css/Home.css";
 import { AnimeCart } from "../components/AnimeCart";
 import { Link } from "react-router-dom";
 import { useAPI } from "../context/APIcontext";
-import { useState } from "react";
-import { useFilteredAnime } from "../context/FilteredAnimeContext";
 
 export const Home = () => {
   const { fullAnimeList } = useAPI();
-  const { completedAnime, setCompletedAnime } = useFilteredAnime();
 
   return (
     <div className="Home">
+      <h1>Top 50 Anime</h1>
       <ul>
         {fullAnimeList.map(anime => (
           <li key={anime.mal_id}>

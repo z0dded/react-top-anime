@@ -4,6 +4,7 @@ const FilteredAnime = createContext();
 
 export function FilteredAnimeProvider({ children }) {
   const [completedAnime, setCompletedAnime] = useState([]);
+  const [watchingAnime, setWatchingAnime] = useState([]);
   const [planToWatchAnime, setPlanToWatchAnime] = useState([]);
 
   return (
@@ -11,6 +12,10 @@ export function FilteredAnimeProvider({ children }) {
       value={{
         completedAnime,
         setCompletedAnime,
+        watchingAnime,
+        setWatchingAnime,
+        planToWatchAnime,
+        setPlanToWatchAnime,
       }}
     >
       {children}

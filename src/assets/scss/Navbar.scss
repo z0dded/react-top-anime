@@ -1,19 +1,31 @@
 .Navbar {
   background-color: #152232;
   height: 3rem;
+  padding: 0 4rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
+  .Logo {
+    a {
+      font-size: 1.8rem;
+    }
+  }
+
+  .BlueLetters {
+    color: rgb(61, 180, 242);
+    font-weight: bold;
+  }
 
   ul {
     list-style-type: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   a {
     color: #a0b1c5;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: none;
   }
 }

@@ -1,5 +1,5 @@
 .AnimeDetails {
-  height: calc(100vh - 3rem);
+  min-height: calc(100vh - 3rem);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -32,14 +32,14 @@
     }
 
     .AnimeDetailsCardText {
-      flex: 1;
-      height: 100%;
+      min-height: 29.5rem;
       padding: 1rem;
       display: flex;
       flex-direction: column;
 
       h1 {
         font-size: 1.8rem;
+        font-weight: bold;
         margin-bottom: 0.8rem;
       }
 
@@ -104,10 +104,98 @@
     background-color: rgba(0, 0, 0, 0.6);
 
     .AddAnimeModalCard {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      text-align: center;
       background-color: #152232;
       border-radius: 10px;
-      width: 30rem;
-      height: 10rem;
+      width: 35rem;
+      height: 25rem;
+
+      .ModalImage {
+        margin: 0.5rem 0 0.5rem;
+        height: 200px;
+        width: 150px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      h1 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      select {
+        background-color: #0b1622;
+        width: 12rem;
+        height: 2rem;
+        padding-left: 0.25rem;
+        border: none;
+        border-radius: 5px;
+        color: rgb(159, 173, 189);
+
+        &:focus {
+          outline: none;
+        }
+
+        option {
+          font-size: 0.8rem;
+        }
+      }
+
+      .ModalButtons {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 2rem;
+        padding-bottom: 1rem;
+
+        button {
+          padding: 0.25rem 1rem;
+          font-size: 1rem;
+          border-radius: 4px;
+          background-color: transparent;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .CancelButton {
+          color: rgb(201, 0, 0);
+          border: 2px solid rgb(201, 0, 0);
+
+          &:hover {
+            background: rgb(201, 0, 0);
+            color: white;
+          }
+        }
+
+        .AddButton {
+          color: rgb(61, 180, 242);
+          border: 2px solid rgb(61, 180, 242);
+
+          &:hover {
+            background-color: rgb(61, 180, 242);
+            color: white;
+          }
+
+          &:disabled {
+            color: gray;
+            border: 2px solid gray;
+
+            &:hover {
+              background-color: transparent;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
     }
   }
 }

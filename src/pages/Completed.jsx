@@ -10,7 +10,7 @@ export const Completed = () => {
 
   return (
     <div className="Completed">
-      <h1>Completed Anime</h1>
+      <h1>Completed</h1>
       <ul>
         {uniqueAnimeList.map(anime => (
           <li key={anime.mal_id}>
