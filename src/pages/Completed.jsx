@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/scss/Completed.scss";
+import "../assets/scss/FilteredList.scss";
 import { AnimeCart } from "../components/AnimeCart";
 import { useFilteredAnime } from "../context/FilteredAnimeContext";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ export const Completed = () => {
   const uniqueAnimeList = [...new Set(completedAnime)];
 
   return (
-    <div className="Completed">
+    <div className="FilteredList">
       <h1>Completed</h1>
       <ul>
         {uniqueAnimeList.map(anime => (

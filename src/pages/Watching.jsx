@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/scss/Watching.scss";
+import "../assets/scss/FilteredList.scss";
 import { AnimeCart } from "../components/AnimeCart";
 import { useFilteredAnime } from "../context/FilteredAnimeContext";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ export const Watching = () => {
   const uniqueAnimeList = [...new Set(watchingAnime)];
 
   return (
-    <div className="Watching">
+    <div className="FilteredList">
       <h1>Watching</h1>
       <ul>
         {uniqueAnimeList.map(anime => (

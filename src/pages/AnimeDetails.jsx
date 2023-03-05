@@ -5,7 +5,6 @@ import { useAPI } from "../context/APIcontext";
 import { useFilteredAnime } from "../context/FilteredAnimeContext";
 
 export const AnimeDetails = () => {
-  const { state } = useLocation();
   const { id } = useParams();
   const { fullAnimeList } = useAPI();
   const {
@@ -22,8 +21,8 @@ export const AnimeDetails = () => {
   const [disableButton, setDisableButton] = useState();
   const selectRef = useRef(null);
 
-  const shortSynopsis = state.synopsis.split(" ", 125).join(" ");
   const currentAnime = fullAnimeList.find(el => el.mal_id == id);
+  const shortSynopsis = currentAnime.synopsis.split(" ", 125).join(" ");
 
   const changeReadMore = () => {
     setReadMore(!readMore);
@@ -54,14 +53,16 @@ export const AnimeDetails = () => {
         <div className="AnimeDetailsImageContainer">
           <div
             className="AnimeDetailsImage"
-            style={{ backgroundImage: `url(${state.image})` }}
+            style={{
+              backgroundImage: `url(${currentAnime.images.jpg.large_image_url})`,
+            }}
           ></div>
         </div>
         <div className="AnimeDetailsCardText">
           <div className="AnimeDetailsInfo">
-            <h1>{state.title}</h1>
+            <h1>{currentAnime.title}</h1>
             <p>
-              {readMore ? state.synopsis : shortSynopsis}
+              {readMore ? currentAnime.synopsis : shortSynopsis}
               <button className="ReadMoreButton" onClick={changeReadMore}>
                 {readMore ? "show less" : "...read more"}
               </button>
@@ -85,9 +86,11 @@ export const AnimeDetails = () => {
         <div className="AddAnimeModalCard">
           <div
             className="ModalImage"
-            style={{ backgroundImage: `url(${state.image})` }}
+            style={{
+              backgroundImage: `url(${currentAnime.images.jpg.large_image_url})`,
+            }}
           ></div>
-          <h1>{state.title}</h1>
+          <h1>{currentAnime.title}</h1>
           <select
             name="list-selection"
             defaultValue={"placeholder"}

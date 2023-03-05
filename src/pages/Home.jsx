@@ -13,15 +13,7 @@ export const Home = () => {
       <ul>
         {fullAnimeList.map(anime => (
           <li key={anime.mal_id}>
-            <Link
-              to={`/anime/${anime.mal_id}`}
-              state={{
-                title: anime.title,
-                image: anime.images.jpg.large_image_url,
-                synopsis: anime.synopsis,
-              }}
-              className="DetailsLink"
-            >
+            <Link to={`/anime/${anime.mal_id}`} className="DetailsLink">
               <AnimeCart
                 title={anime.title}
                 image={anime.images.jpg.large_image_url}
