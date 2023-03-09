@@ -7,9 +7,25 @@
   padding-top: 3rem;
 
   h1 {
-    color: white;
+    color: #a0b1c5;
     font-size: 3rem;
     margin-bottom: 3rem;
+  }
+
+  input {
+    border: none;
+    background-color: #1e3148;
+    color: white;
+    height: 2rem;
+    width: 20rem;
+    font-size: 1.5rem;
+    padding-left: 0.25rem;
+    margin-bottom: 3rem;
+
+    &::placeholder {
+      font-size: 1.4rem;
+      color: #a0b1c5;
+    }
   }
 
   ul {
